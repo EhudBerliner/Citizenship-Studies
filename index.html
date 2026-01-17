@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מילון מונחים - אזרחות</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3429/3429153.png">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 15px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* אזור הגרלה */
+        .quiz-section {
+            background: #f9f9f9;
+            border: 2px solid #3498db;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .term-display {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #c0392b;
+            margin-bottom: 15px;
+            min-height: 40px;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            flex: 1;
+            font-weight: bold;
+        }
+        .btn-draw { background: #3498db; color: white; }
+        .btn-show { background: #2ecc71; color: white; }
+        
+        .def-display {
+            font-size: 1rem;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            display: none;
+            text-align: right;
+        }
+
+        /* עיצוב המילון */
+        h2 { color: #2980b9; background-color: #eaf2f8; padding: 10px; border-right: 5px solid #2980b9; font-size: 1.2rem; margin-top: 25px;}
+        h3 { color: #16a085; border-bottom: 1px solid #ddd; font-size: 1.1rem; }
+        .term-item { margin-bottom: 15px; padding: 10px; border-bottom: 1px solid #eee; }
+        .term-title { font-weight: bold; color: #c0392b; display: block; }
+        ul { padding-right: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>מילון מונחים באזרחות</h1>
+
+    <div class="quiz-section">
+        <div id="termBox" class="term-display">לחץ להגרלת מונח</div>
+        
+        <div class="btn-group">
+            <button class="btn-draw" onclick="draw()">הגרל מונח</button>
+            <button class="btn-show" onclick="show()">חשוף ביאור</button>
+        </div>
+
+        <div id="defBox" class="def-display"></div>
+    </div>
+
+    <h2>חלק 1: רקע היסטורי והכרזת העצמאות</h2>
+    <div class="term-item"><span class="term-title">הצהרת בלפור (1917):</span> מכתב משר החוץ הבריטי המודיע על תמיכה בהקמת בית לאומי ליהודים בארץ ישראל.</div>
+    <div class="term-item"><span class="term-title">כתב המנדט (1922):</span> הסמכה של חבר הלאומים לבריטניה להקים בית לאומי ליהודים, תוך שמירת זכויות הלא-יהודים.</div>
+    <div class="term-item"><span class="term-title">החלטה 181 (תכנית החלוקה):</span> החלטת האו"ם מכ"ט בנובמבר 1947 להקים מדינה יהודית ומדינה ערבית. היהודים קיבלו, הערבים דחו ופתחו במלחמה.</div>
+    <div class="term-item"><span class="term-title">הכרזת העצמאות:</span> מסמך ההקמה של ישראל. נחתם בתל אביב בה' באייר תש"ח (14.5.1948) ע"י דוד בן גוריון ומועצת העם.</div>
+
+    <h2>חלק 2: הצדקות ומאפיינים בהכרזה</h2>
+    <h3>הצדקות להקמת המדינה</h3>
+    <div class="term-item"><span class="term-title">היסטוריות:</span> הקשר התנ"כי, השמירה על התקווה בגלות, העלייה בדורות האחרונים והוכחת הצורך במדינה בעקבות השואה.</div>
+    <div class="term-item"><span class="term-title">משפטיות:</span> הכרה בינלאומית כמו הצהרת בלפור, המנדט והחלטת האו"ם.</div>
+    <div class="term-item"><span class="term-title">טבעית:</span> הזכות האוניברסלית של כל עם להגדרה עצמית.</div>
+    
+    <h3>מאפייני המדינה</h3>
+    <div class="term-item"><span class="term-title">יהודיים:</span> שם המדינה (ישראל), פתיחת שערים ליהודים, שימוש בתאריך עברי והסתמכות על מורשת נביאי ישראל.</div>
+    <div class="term-item"><span class="term-title">דמוקרטיים:</span> קיום בחירות, הבטחה לשוויון זכויות (ללא הבדל דת, גזע ומין), חופש דת ומצפון, ושמירה על המקומות הקדושים.</div>
+
+    <h2>חלק 3: עקרונות דמוקרטיים ובחירות</h2>
+    <div class="term-item"><span class="term-title">שלטון העם:</span> האזרחים הם הריבון ומקור הסמכות, הם בוחרים נציגים לזמן קצוב.</div>
+    <div class="term-item">
+        <strong>5 תנאים לבחירות דמוקרטיות:</strong>
+        <ul>
+            <li>כלליות: כולם זכאים לבחור ולהיבחר.</li>
+            <li>חשאיות: איש לא יודע במי בחרת.</li>
+            <li>מחזוריות: הבחירות חוזרות בזמן קבוע.</li>
+            <li>שוויוניות: כל קול שווה למשנהו.</li>
+            <li>התמודדות חופשית: תחרות הוגנת בין מפלגות.</li>
+        </ul>
+    </div>
+    <div class="term-item"><span class="term-title">שיטת הבחירות בישראל:</span> ארצית (כל הארץ אזור אחד), יחסית (חלוקת המושבים לפי אחוז הקולות), ורשימתית (מצביעים לרשימת מפלגה).</div>
+    <div class="term-item"><span class="term-title">אחוז החסימה:</span> אחוז הקולות המינימלי שמפלגה צריכה כדי להיכנס לכנסת (בישראל: 3.25%).</div>
+    <div class="term-item"><span class="term-title">הכרעת הרוב:</span> קבלת החלטות לפי תמיכת הרוב, תוך הגנה על זכויות המיעוט (מניעת "עריצות הרוב").</div>
+
+    <h2>חלק 4: הרשות המחוקקת (הכנסת)</h2>
+    <div class="term-item"><span class="term-title">הכנסת:</span> מונה 120 חברים. תפקידיה: חקיקה, כינון הממשלה, פיקוח על הממשלה ומינוי בכירים (נשיא ומבקר המדינה).</div>
+    <div class="term-item"><span class="term-title">קואליציה:</span> סיעות המהוות רוב בכנסת ותומכות בממשלה (מבוסס על הסכמים).</div>
+    <div class="term-item"><span class="term-title">אופוזיציה:</span> הסיעות שאינן בממשלה. תפקידן לבקר את השלטון ולהציג חלופה.</div>
+    <div class="term-item"><span class="term-title">מליאה:</span> הגוף המרכזי של הכנסת (כל 120 החברים) בו מתקבלות החלטות ברוב קולות.</div>
+    <div class="term-item"><span class="term-title">ועדות הכנסת:</span> דנות בתחומים ספציפיים (כספים, חינוך וכו') כדי לייעל את העבודה ולדון בפרטי חוקים.</div>
+    <div class="term-item"><span class="term-title">הצעת אי אמון:</span> כלי של הכנסת להפלת הממשלה (בישראל נדרש רוב של 61 ח"כים ומועמד חלופי).</div>
+    <div class="term-item"><span class="term-title">חוק התקציב:</span> קובע את סדר העדיפויות הכלכלי לשנה. אם התקציב לא עובר, הממשלה נופלת.</div>
+</div>
+
+<script>
+    // מאגר הנתונים המבוסס על הטקסט המקורי
+    const data = [
+        {t: "הצהרת בלפור (1917)", d: "מכתב משר החוץ הבריטי המודיע על תמיכה בהקמת בית לאומי ליהודים בארץ ישראל."},
+        {t: "כתב המנדט (1922)", d: "הסמכה של חבר הלאומים לבריטניה להקים בית לאומי ליהודים, תוך שמירת זכויות הלא-יהודים."},
+        {t: "החלטה 181 (תכנית החלוקה)", d: "החלטת האו\"ם מכ\"ט בנובמבר 1947 להקים מדינה יהודית ומדינה ערבית. היהודים קיבלו, הערבים דחו ופתחו במלחמה."},
+        {t: "הכרזת העצמאות", d: "מסמך ההקמה של ישראל. נחתם בתל אביב בה' באייר תש\"ח (14.5.1948) ע\"י דוד בן גוריון ומועצת העם."},
+        {t: "הצדקות היסטוריות", d: "הקשר התנ\"כי, השמירה על התקווה בגלות, העלייה בדורות האחרונים והוכחת הצורך במדינה בעקבות השואה."},
+        {t: "הצדקות משפטיות", d: "הכרה בינלאומית כמו הצהרת בלפור, המנדט והחלטת האו\"ם."},
+        {t: "הצדקה טבעית", d: "הזכות האוניברסלית של כל עם להגדרה עצמית."},
+        {t: "מאפיינים יהודיים", d: "שם המדינה (ישראל), פתיחת שערים ליהודים, שימוש בתאריך עברי והסתמכות על מורשת נביאי ישראל."},
+        {t: "מאפיינים דמוקרטיים", d: "קיום בחירות, הבטחה לשוויון זכויות (ללא הבדל דת, גזע ומין), חופש דת ומצפון, ושמירה על המקומות הקדושים."},
+        {t: "שלטון העם", d: "האזרחים הם הריבון ומקור הסמכות, הם בוחרים נציגים לזמן קצוב."},
+        {t: "שיטת הבחירות בישראל", d: "ארצית (כל הארץ אזור אחד), יחסית (חלוקת המושבים לפי אחוז הקולות), ורשימתית (מצביעים לרשימת מפלגה)."},
+        {t: "אחוז החסימה", d: "אחוז הקולות המינימלי שמפלגה צריכה כדי להיכנס לכנסת (בישראל: 3.25%)."},
+        {t: "הכרעת הרוב", d: "קבלת החלטות לפי תמיכת הרוב, תוך הגנה על זכויות המיעוט (מניעת \"עריצות הרוב\")."},
+        {t: "הכנסת", d: "מונה 120 חברים. תפקידיה: חקיקה, כינון הממשלה, פיקוח על הממשלה ומינוי בכירים (נשיא ומבקר המדינה)."},
+        {t: "קואליציה", d: "סיעות המהוות רוב בכנסת ותומכות בממשלה (מבוסס על הסכמים)."},
+        {t: "אופוזיציה", d: "הסיעות שאינן בממשלה. תפקידן לבקר את השלטון ולהציג חלופה."},
+        {t: "מליאה", d: "הגוף המרכזי של הכנסת (כל 120 החברים) בו מתקבלות החלטות ברוב קולות."},
+        {t: "ועדות הכנסת", d: "דנות בתחומים ספציפיים (כספים, חינוך וכו') כדי לייעל את העבודה ולדון בפרטי חוקים."},
+        {t: "הצעת אי אמון", d: "כלי של הכנסת להפלת הממשלה (בישראל נדרש רוב של 61 ח\"כים ומועמד חלופי)."},
+        {t: "חוק התקציב", d: "קובע את סדר העדיפויות הכלכלי לשנה. אם התקציב לא עובר, הממשלה נופלת."}
+    ];
+
+    function draw() {
+        const random = data[Math.floor(Math.random() * data.length)];
+        document.getElementById('termBox').innerText = random.t;
+        document.getElementById('defBox').innerText = random.d;
+        document.getElementById('defBox').style.display = 'none';
+    }
+
+    function show() {
+        const box = document.getElementById('defBox');
+        if (box.innerText !== "") box.style.display = 'block';
+    }
+
+    // רישום ה-Service Worker לטובת התקנה כאפליקציה
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    }
+</script>
+
+</body>
+</html>
